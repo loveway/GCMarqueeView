@@ -72,11 +72,8 @@
 				21AB899322F3061A00F6C2E1 /* AppDelegate.m */,
 				21AB899522F3061A00F6C2E1 /* ViewController.h */,
 				21AB899622F3061A00F6C2E1 /* ViewController.m */,
-				21AB899822F3061A00F6C2E1 /* Main.storyboard */,
-				21AB899B22F3061D00F6C2E1 /* Assets.xcassets */,
-				21AB899D22F3061D00F6C2E1 /* LaunchScreen.storyboard */,
 				21AB89A022F3061D00F6C2E1 /* Info.plist */,
-				21AB89A122F3061D00F6C2E1 /* main.m */,
+				21AB89B222F3080800F6C2E1 /* others */,
 			);
 			path = GCMarqueeViewDemo;
 			sourceTree = "<group>";
@@ -92,6 +89,17 @@
 				21AB89AD22F3065E00F6C2E1 /* GCMarqueeModel.m */,
 			);
 			path = GCMarqueeView;
+			sourceTree = "<group>";
+		};
+		21AB89B222F3080800F6C2E1 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				21AB899822F3061A00F6C2E1 /* Main.storyboard */,
+				21AB899B22F3061D00F6C2E1 /* Assets.xcassets */,
+				21AB899D22F3061D00F6C2E1 /* LaunchScreen.storyboard */,
+				21AB89A122F3061D00F6C2E1 /* main.m */,
+			);
+			path = others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

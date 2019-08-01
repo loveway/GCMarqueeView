@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GCMarqueeView.h"
+#import "GCMarqueeModel.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSArray *dataArray =@[@"①这是第一个",
+                          @"②这是第二个",
+                          @"③这是第三个",
+                          @"④这是第四个",
+                          @"⑤这是第五个"
+                          ];
+    NSMutableArray *items = @[].mutableCopy;
+    for (NSString *str in dataArray) {
+        GCMarqueeModel *model = [[GCMarqueeModel alloc] init];
+        model.title = str;
+        [items addObject:model];
+    }
+    
+    GCMarqueeView *view = [[GCMarqueeView alloc] initWithFrame:CGRectMake(0, 200, 300, 28) type:GCMarqueeDirectionTypeLTR];
+    view.backgroundColor = [UIColor redColor];
+    view.items = items;
+    [self.view addSubview:view];
+    
+    GCMarqueeView *view2 = [[GCMarqueeView alloc] initWithFrame:CGRectMake(0, 300, 300, 28) type:GCMarqueeDirectionTypeTTB];
+    view2.backgroundColor = [UIColor greenColor];
+    view2.items = items;
+    [self.view addSubview:view2];
+    
+    GCMarqueeView *view3 = [[GCMarqueeView alloc] initWithFrame:CGRectMake(0, 400, 300, 28) type:GCMarqueeDirectionTypeRTL];
+    view3.backgroundColor = [UIColor purpleColor];
+    view3.items = items;
+    [self.view addSubview:view3];
+    
+    GCMarqueeView *view4 = [[GCMarqueeView alloc] initWithFrame:CGRectMake(0, 500, 300, 28) type:GCMarqueeDirectionTypeBTT];
+    view4.backgroundColor = [UIColor blueColor];
+    view4.items = items;
+    [self.view addSubview:view4];
+    
+    GCMarqueeView *view5 = [[GCMarqueeView alloc] initWithFrame:CGRectMake(0, 600, 300, 28) type:GCMarqueeDirectionTypeReverse];
+    view5.backgroundColor = [UIColor cyanColor];
+    view5.items = items;
+    [self.view addSubview:view5];
+
 }
 
 

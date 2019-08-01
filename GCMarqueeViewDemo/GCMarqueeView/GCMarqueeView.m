@@ -31,6 +31,7 @@ static CGFloat const pointsPerFrame = 1;
 
 - (instancetype)initWithFrame:(CGRect)frame type:(GCMarqueeDirectionType)type {
     if (self == [super initWithFrame:frame]) {
+        self.clipsToBounds = YES;
         _type = type;
         [self initViews];
     }
@@ -114,6 +115,8 @@ static CGFloat const pointsPerFrame = 1;
 
 - (void)marqueeRunning {
     CGFloat self_width = self.bounds.size.width;
+    CGFloat self_height = self.bounds.size.height;
+
     CGRect rect = _scrollView.frame;
     if (_type == GCMarqueeDirectionTypeRTL) {
         rect.origin.x -= pointsPerFrame;
@@ -127,13 +130,13 @@ static CGFloat const pointsPerFrame = 1;
         }
     } else if (_type == GCMarqueeDirectionTypeTTB) {
         rect.origin.y += pointsPerFrame;
-        if (rect.origin.y >= self_width) {
+        if (rect.origin.y >= self_height) {
             rect.origin.y = -_scrollView.contentSize.height;
         }
     } else if (_type == GCMarqueeDirectionTypeBTT) {
         rect.origin.y -= pointsPerFrame;
         if (rect.origin.y <= -_scrollView.contentSize.height) {
-            rect.origin.y = self_width;
+            rect.origin.y = self_height;
         }
     } else if (_type == GCMarqueeDirectionTypeReverse) {
         if (_isReverse) {
