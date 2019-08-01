@@ -20,10 +20,10 @@
     [super viewDidLoad];
     
     NSArray *dataArray =@[@"①这是第一个",
-                          @"②这是第二个",
-                          @"③这是第三个",
-                          @"④这是第四个",
-                          @"⑤这是第五个"
+                          @"②这是第二个第二个",
+                          @"③这是第三个这是第三个",
+                          @"④四",
+                          @"⑤第五个"
                           ];
     NSMutableArray *items = @[].mutableCopy;
     for (NSString *str in dataArray) {

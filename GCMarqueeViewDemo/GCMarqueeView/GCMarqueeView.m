@@ -142,7 +142,7 @@ static CGFloat const pointsPerFrame = 1;
         if (_isReverse) {
             rect.origin.x += pointsPerFrame;
             if (rect.origin.x >= 0) {
-                _isReverse = YES;
+                _isReverse = NO;
             }
         } else {
             rect.origin.x -= pointsPerFrame;
