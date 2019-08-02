@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A6EAA822F3CA000099228B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2199910822F3C8C900AF1655 /* Info.plist */; };
 		21AB899422F3061A00F6C2E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AB899322F3061A00F6C2E1 /* AppDelegate.m */; };
 		21AB899722F3061A00F6C2E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AB899622F3061A00F6C2E1 /* ViewController.m */; };
 		21AB899A22F3061A00F6C2E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21AB899822F3061A00F6C2E1 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2199910822F3C8C900AF1655 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21AB898F22F3061A00F6C2E1 /* GCMarqueeViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCMarqueeViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21AB899222F3061A00F6C2E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21AB899322F3061A00F6C2E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -27,7 +29,6 @@
 		21AB899922F3061A00F6C2E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21AB899B22F3061D00F6C2E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21AB899E22F3061D00F6C2E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		21AB89A022F3061D00F6C2E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21AB89A122F3061D00F6C2E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21AB89A922F3065E00F6C2E1 /* GCMarqueeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCMarqueeModel.h; sourceTree = "<group>"; };
 		21AB89AA22F3065E00F6C2E1 /* GCMarqueeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCMarqueeItem.m; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 				21AB899322F3061A00F6C2E1 /* AppDelegate.m */,
 				21AB899522F3061A00F6C2E1 /* ViewController.h */,
 				21AB899622F3061A00F6C2E1 /* ViewController.m */,
-				21AB89A022F3061D00F6C2E1 /* Info.plist */,
 				21AB89B222F3080800F6C2E1 /* others */,
 			);
 			path = GCMarqueeViewDemo;
@@ -94,6 +94,7 @@
 		21AB89B222F3080800F6C2E1 /* others */ = {
 			isa = PBXGroup;
 			children = (
+				2199910822F3C8C900AF1655 /* Info.plist */,
 				21AB899822F3061A00F6C2E1 /* Main.storyboard */,
 				21AB899B22F3061D00F6C2E1 /* Assets.xcassets */,
 				21AB899D22F3061D00F6C2E1 /* LaunchScreen.storyboard */,
@@ -159,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A6EAA822F3CA000099228B /* Info.plist in Resources */,
 				21AB899F22F3061D00F6C2E1 /* LaunchScreen.storyboard in Resources */,
 				21AB899C22F3061D00F6C2E1 /* Assets.xcassets in Resources */,
 				21AB899A22F3061A00F6C2E1 /* Main.storyboard in Resources */,
@@ -321,7 +323,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B83538JM2;
-				INFOPLIST_FILE = GCMarqueeViewDemo/Info.plist;
+				INFOPLIST_FILE = GCMarqueeViewDemo/others/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +341,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B83538JM2;
-				INFOPLIST_FILE = GCMarqueeViewDemo/Info.plist;
+				INFOPLIST_FILE = GCMarqueeViewDemo/others/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

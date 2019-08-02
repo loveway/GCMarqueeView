@@ -39,7 +39,7 @@ static CGFloat icon_height = 18.0f;
 - (void)initUI {
     
     _imageV = [UIImageView new];
-    _imageV.image = [UIImage imageNamed:@""];
+    _imageV.image = [UIImage imageNamed:@"flag_icon"];
     [self addSubview:_imageV];
     
     _titleLabel = [UILabel new];
