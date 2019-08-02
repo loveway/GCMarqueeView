@@ -30,7 +30,7 @@ static CGFloat icon_height = 18.0f;
         _model = model;
         self.layer.masksToBounds = YES;
         self.layer.cornerRadius = model.itemHeight / 2;
-        self.backgroundColor = [UIColor yellowColor];
+        self.backgroundColor = [UIColor orangeColor];
         [self initUI];
     }
     return self;

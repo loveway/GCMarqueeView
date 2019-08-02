@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GCMarqueeModel : NSObject
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, assign) CGFloat itemWidth;
-@property (nonatomic, assign) CGFloat itemHeight;
+@property (nonatomic, assign, readonly) CGFloat itemWidth;
+@property (nonatomic, assign, readonly) CGFloat itemHeight;
 
 @end
 NS_ASSUME_NONNULL_END

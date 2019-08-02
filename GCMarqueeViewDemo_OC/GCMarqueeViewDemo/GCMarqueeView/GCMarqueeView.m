@@ -104,7 +104,11 @@ static CGFloat const pointsPerFrame = 1;
 - (void)startRunning {
     [self stopRunning];
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(marqueeRunning)];
-    _displayLink.preferredFramesPerSecond = framesPerSecond;
+    if (@available(iOS 10.0,*)) {
+        _displayLink.preferredFramesPerSecond = framesPerSecond;
+    } else {
+        _displayLink.frameInterval = framesPerSecond;
+    }
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
