@@ -3,7 +3,9 @@ GCMarqueeView is a marquee view templete, you can use it in your project. Now, t
 
 ## Overview
 
-![gif](https://github.com/loveway/GCMarqueeView/blob/master/GCMarqueeviewDemo.gif?raw=true)
+<p align='center'>
+<img src='https://upload-images.jianshu.io/upload_images/571495-60d34400ca09c1c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240'>
+</p>
 
 ## Requirements
 Xcode 10.2+
