@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         
         let view1 = GCMarqueeView(frame: CGRect(x: lead, y: 200, width: marqueeWidth, height: 28), type: .ltr);
         view1.backgroundColor = .red
+        view1.block =  { model in
+            print("\(model?.title ?? "There is not model !")")
+        }
+//      view1.pointsPerFrame = 2
         view1.items = items
         view.addSubview(view1)
         

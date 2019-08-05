@@ -20,6 +20,8 @@ class GCMarqueeItem: UIView {
     var model: GCMarqueeModel?
     private var imageV: UIImageView?
     private var titleLabel: UILabel?
+    typealias tapBlock = (GCMarqueeModel?) -> ()
+    var block: tapBlock = {_ in }
 
     init(frame: CGRect, model: GCMarqueeModel) {
         self.model = model
@@ -58,7 +60,7 @@ class GCMarqueeItem: UIView {
     }
     
     @objc func tap() {
-        
+        block(model)
     }
     
 

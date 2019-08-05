@@ -8,12 +8,19 @@
 
 import UIKit
 
+/// Marquee run direction.
+///
+/// - rtl: right -> left
+/// - ltr: left -> right
+/// - ttb: top -> bottom
+/// - btt: bottom -> top
+/// - reverse: right -> left -> right ...
 enum GCMarqueeDirectionType: Int {
-   case rtl,
-        ltr,
-        ttb,
-        btt,
-        reverse
+   case rtl
+   case ltr
+   case ttb
+   case btt
+   case reverse
 }
 
 struct GCMarqueeModel {
@@ -43,8 +50,11 @@ struct GCMarqueeModel {
 
 class GCMarqueeView: UIView {
     
+    typealias tapBlock = (GCMarqueeModel?) -> ()
+    var block: tapBlock = {_ in }
+    
     private let framesPerSecond = 30
-    private let pointsPerFrame: CGFloat = 2
+    public var pointsPerFrame: CGFloat = 1//default is 1, you can set it what you want.
     private var isReverse = false
     var type: GCMarqueeDirectionType
     private var scrollView: UIScrollView!
@@ -93,6 +103,9 @@ class GCMarqueeView: UIView {
             }
             
             let item = GCMarqueeItem(frame: tmpFrame, model: items[i])
+            item.block = { model in
+                self.block(model)
+            }
             scrollView.addSubview(item)
             tmpItem = item
         }
