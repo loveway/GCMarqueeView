@@ -34,7 +34,7 @@ func initUI() {
 }
 
 ```
-objective-c
+objective-C
 ```objc
 - (void)initUI {
     
